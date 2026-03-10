@@ -1,5 +1,5 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/line-yahoo-tag'
 versions:
-  - sha: XXXXXXXXXXXXXX
+  - sha: 3838498454503b2829ee4d027f1a13a9f6cfd869
     changeNotes: Initial release.
