@@ -1,5 +1,7 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/line-yahoo-tag'
 versions:
+  - sha: 3e512b202daecf1b3ee88553f79b58491de8c642
+    changeNotes: Fix typos in help texts and when reading custom domain field from UI.
   - sha: 10e591b9322629d4c8b597d89b4bc1cc27334f65
     changeNotes: Initial release.
