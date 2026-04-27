@@ -761,7 +761,7 @@ ___TEMPLATE_PARAMETERS___
         },
         "simpleValueType": true,
         "help": {
-          "text": "If enabled, the tag will attempt to automatically map parameters from the Event Data.\n\u003cbr/\u003e\u003cbr/\u003e\nAny value you manually enter in a field below will always override the auto-mapped value.\n\u003cbr/\u003e\u003cbr/\u003e\nDefault mappings:\n\u003cul\u003e\n\u003cli\u003eEmail:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.sha256_email_address\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003ePhone:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.sha256_phone_number\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAnonymous ID (_\u003ci\u003ely_su\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_su\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_su\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_su\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eClick ID (\u003ci\u003e_ly_c\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_c\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_c\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eComplementary Click ID (\u003ci\u003e_ly_r\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_r\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_r\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eMobile ID (iOS IDFA and Android GAID/AAID): \u003ci\u003eeventData[\u0027x-ga-resettable_device_id\u0027]\u003c/i\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
+          "text": "If enabled, the tag will attempt to automatically map parameters from the Event Data.\n\u003cbr/\u003e\u003cbr/\u003e\nAny value you manually enter in a field below will always override the auto-mapped value.\n\u003cbr/\u003e\u003cbr/\u003e\nDefault mappings:\n\u003cul\u003e\n\u003cli\u003eEmail:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_Data.sha256_email_address\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003ePhone:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.sha256_phone_number\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAnonymous ID (_\u003ci\u003ely_su\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_su\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_su\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_su\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eClick ID (\u003ci\u003e_ly_c\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_c\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_c\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eComplementary Click ID (\u003ci\u003e_ly_r\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_r\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_r\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eMobile ID (iOS IDFA and Android GAID/AAID): \u003ci\u003eeventData[\u0027x-ga-resettable_device_id\u0027]\u003c/i\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
           "translations": [
             {
               "locale": "ja",
@@ -1089,7 +1089,24 @@ ___TEMPLATE_PARAMETERS___
             }
           ]
         },
-        "defaultValue": true
+        "defaultValue": true,
+        "subParams": [
+          {
+            "type": "TEXT",
+            "name": "itemIdKey",
+            "displayName": "Custom Item ID Key",
+            "simpleValueType": true,
+            "canBeEmptyString": true,
+            "enablingConditions": [
+              {
+                "paramName": "autoMapEventParameters",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ],
+            "help": "Optional.\n\u003cbr/\u003e\u003cbr/\u003e\nYou can specify a custom key, which will be used to set the content Item ID, by default \u003ci\u003eitem_id\u003c/i\u003e will be used. This may be useful if you are using WooCommerce extensions."
+          }
+        ]
       },
       {
         "type": "SIMPLE_TABLE",
@@ -1499,7 +1516,7 @@ if (data.useOptimisticScenario) {
 
 function setCookies(data, mappedData) {
   const cookieOptions = {
-    domain: getCookieDomain(data.clickIdCookieDomain),
+    domain: getCookieDomain(data.cookieDomain),
     samesite: data.cookieSameSite || 'Lax',
     path: '/',
     secure: true,

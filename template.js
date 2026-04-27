@@ -56,7 +56,7 @@ if (data.useOptimisticScenario) {
 
 function setCookies(data, mappedData) {
   const cookieOptions = {
-    domain: getCookieDomain(data.clickIdCookieDomain),
+    domain: getCookieDomain(data.cookieDomain),
     samesite: data.cookieSameSite || 'Lax',
     path: '/',
     secure: true,
