@@ -157,3 +157,6 @@ Available when **Conversion Source** is set to `Web`. For full parameter descrip
 ## Open Source
 
 The **LINE Yahoo Conversion API Tag for GTM Server-Side** is developed and maintained by the [Stape Team](https://stape.io/) under the Apache 2.0 license.
+
+### GTM Gallery Status
+🟢 [Listed](https://tagmanager.google.com/gallery/#/owners/stape-io/templates/line-yahoo-tag)
