@@ -15,7 +15,6 @@ The **LINE Yahoo Conversion API Tag** for Google Tag Manager Server-Side allows 
 - **PII Hashing**: Automatically hashes email addresses and phone numbers using SHA-256 before sending.
 - **Event Deduplication**: Supports the `Transaction ID / Event ID` field to [deduplicate events](https://ads-developers.yahoo.co.jp/en/lytag/post/30590590.html#c04) between the Measurement Tag (web pixel) and the Conversion API.
 - **Consent Mode Support**: Integrates with Google Consent Mode, checking for `ad_storage` consent before sending data.
-- **Advanced Logging**: Provides options for logging to the GTM console for debugging and persistent logging to BigQuery for monitoring.
 
 ## How It Works
 
@@ -101,7 +100,7 @@ At least one user identifier is required (either auto-mapped or manually provide
 | **Automap User Identifiers Parameters** | If enabled, automatically maps Email, Phone, Anonymous ID, Click ID, Complementary Click ID, and Mobile ID from the Event Data. |
 | **User Identifiers Parameters** | Manually specify user identifiers. Supported types: `Email Address`, `Phone Number`, `Anonymous ID (_ly_su)`, `Click ID (_ly_c)`, `Complementary Click ID (_ly_r)`, `Mobile ID (iOS IDFA or Android AAID)`, `LINE User ID`. |
 
-**Phone Number format**: `+{Country Code}{Number}` — digits only, no hyphens or parentheses.  
+**Phone Number format**: `+{Country Code}{Number}` — digits only, no hyphens or parentheses.
 Example: `090-0123-4567` (Japan) → `+819001234567`.
 
 When passing a **LINE User ID**, make sure to also provide the **Channel ID** in the Base Configuration.
@@ -122,7 +121,7 @@ Available when **Conversion Source** is set to `Web`. For full parameter descrip
 | **Automap Event Parameters** | If enabled, automatically maps `Value` (from `eventData.value` or sum of items), `Currency`, and `Items` (from `eventData.items`). |
 | **Event Parameters** | Manually specify `Value`, `Currency`, `Items`, and `Label`. |
 
-**Currency**: Only `JPY` is supported. It is added automatically when `Value` is present.  
+**Currency**: Only `JPY` is supported. It is added automatically when `Value` is present.
 **Items**: An array of up to 10 objects, each with `item_id`, `category_id`, `price`, and/or `quantity`. `item_id` or `category_id` is required when specifying `price` or `quantity`.
 
 ### Advanced Settings
@@ -132,21 +131,6 @@ Available when **Conversion Source** is set to `Web`. For full parameter descrip
 | Parameter | Description |
 | :--- | :--- |
 | **Ad Storage Consent** | `Send data always` (default) or `Send data in case marketing consent given`. The latter aborts the tag if `ad_storage` consent (Google Consent Mode or Stape's Data Tag parameter) is not granted. |
-
-#### Logs Settings
-
-| Parameter | Description |
-| :--- | :--- |
-| **Log Type** | `Do not log`, `Log to console during debug and preview` (default), or `Always log to console`. |
-
-#### BigQuery Logs Settings
-
-| Parameter | Description |
-| :--- | :--- |
-| **BigQuery Log Type** | `Do not log to BigQuery` (default) or `Log to BigQuery`. |
-| **BigQuery Project ID** | Optional. Defaults to the `GOOGLE_CLOUD_PROJECT` environment variable. |
-| **BigQuery Dataset ID** | Required when BigQuery logging is enabled. |
-| **BigQuery Table ID** | Required when BigQuery logging is enabled. |
 
 ## Useful Resources
 
