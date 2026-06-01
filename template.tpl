@@ -1269,201 +1269,16 @@ ___TEMPLATE_PARAMETERS___
         "defaultValue": "optional"
       }
     ]
-  },
-  {
-    "type": "GROUP",
-    "name": "logsGroup",
-    "displayName": {
-      "text": "Logs Settings",
-      "translations": [
-        {
-          "locale": "ja",
-          "text": "ログ設定"
-        }
-      ]
-    },
-    "groupStyle": "ZIPPY_CLOSED",
-    "subParams": [
-      {
-        "type": "RADIO",
-        "name": "logType",
-        "radioItems": [
-          {
-            "value": "no",
-            "displayValue": {
-              "text": "Do not log",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "ログを記録しない"
-                }
-              ]
-            }
-          },
-          {
-            "value": "debug",
-            "displayValue": {
-              "text": "Log to console during debug and preview",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "デバッグおよびプレビュー中にコンソールへログを記録する"
-                }
-              ]
-            }
-          },
-          {
-            "value": "always",
-            "displayValue": {
-              "text": "Always log to console",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "常にコンソールへログを記録する"
-                }
-              ]
-            }
-          }
-        ],
-        "simpleValueType": true,
-        "defaultValue": "debug"
-      }
-    ]
-  },
-  {
-    "displayName": {
-      "text": "BigQuery Logs Settings",
-      "translations": [
-        {
-          "locale": "ja",
-          "text": "BigQuery ログ設定"
-        }
-      ]
-    },
-    "name": "bigQueryLogsGroup",
-    "groupStyle": "ZIPPY_CLOSED",
-    "type": "GROUP",
-    "subParams": [
-      {
-        "type": "RADIO",
-        "name": "bigQueryLogType",
-        "radioItems": [
-          {
-            "value": "no",
-            "displayValue": {
-              "text": "Do not log to BigQuery",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "BigQueryにログを記録しない"
-                }
-              ]
-            }
-          },
-          {
-            "value": "always",
-            "displayValue": {
-              "text": "Log to BigQuery",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "BigQueryにログを記録する"
-                }
-              ]
-            }
-          }
-        ],
-        "simpleValueType": true,
-        "defaultValue": "no"
-      },
-      {
-        "type": "GROUP",
-        "name": "logsBigQueryConfigGroup",
-        "groupStyle": "NO_ZIPPY",
-        "subParams": [
-          {
-            "type": "TEXT",
-            "name": "logBigQueryProjectId",
-            "displayName": {
-              "text": "BigQuery Project ID",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "BigQuery プロジェクトID"
-                }
-              ]
-            },
-            "simpleValueType": true,
-            "help": {
-              "text": "Optional.  \u003cbr/\u003e\u003cbr/\u003e  If omitted, it will be retrieved from the environment variable \u003cI\u003eGOOGLE_CLOUD_PROJECT\u003c/i\u003e where the server container is running. If the server container is running on Google Cloud, \u003cI\u003eGOOGLE_CLOUD_PROJECT\u003c/i\u003e will already be set to the Google Cloud project\u0027s ID.",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "任意項目。\u003cbr/\u003e\u003cbr/\u003e省略した場合、サーバーコンテナが実行されている環境変数\u003cI\u003eGOOGLE_CLOUD_PROJECT\u003c/i\u003eから取得されます。Google Cloud上でサーバーコンテナが実行されている場合、\u003cI\u003eGOOGLE_CLOUD_PROJECT\u003c/i\u003eはすでにGoogle CloudプロジェクトのIDに設定されています。"
-                }
-              ]
-            }
-          },
-          {
-            "type": "TEXT",
-            "name": "logBigQueryDatasetId",
-            "displayName": {
-              "text": "BigQuery Dataset ID",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "BigQuery データセットID"
-                }
-              ]
-            },
-            "simpleValueType": true,
-            "valueValidators": [
-              {
-                "type": "NON_EMPTY"
-              }
-            ]
-          },
-          {
-            "type": "TEXT",
-            "name": "logBigQueryTableId",
-            "displayName": {
-              "text": "BigQuery Table ID",
-              "translations": [
-                {
-                  "locale": "ja",
-                  "text": "BigQuery テーブルID"
-                }
-              ]
-            },
-            "simpleValueType": true,
-            "valueValidators": [
-              {
-                "type": "NON_EMPTY"
-              }
-            ]
-          }
-        ],
-        "enablingConditions": [
-          {
-            "paramName": "bigQueryLogType",
-            "paramValue": "always",
-            "type": "EQUALS"
-          }
-        ]
-      }
-    ]
   }
 ]
 
 
 ___SANDBOXED_JS_FOR_SERVER___
 
-const BigQuery = require('BigQuery');
 const computeEffectiveTldPlusOne = require('computeEffectiveTldPlusOne');
 const createRegex = require('createRegex');
 const generateRandom = require('generateRandom');
 const getAllEventData = require('getAllEventData');
-const getContainerVersion = require('getContainerVersion');
 const getCookieValues = require('getCookieValues');
 const getEventData = require('getEventData');
 const getRequestHeader = require('getRequestHeader');
@@ -1497,7 +1312,7 @@ if (invalidOrMissingFields) {
     Name: 'LineYahooCAPITag',
     Type: 'Message',
     EventName: mappedData.data[0].event.event_type,
-    Message: 'Request was not sent.',
+    Message: '🛑 [ERROR] Request was not sent.',
     Reason: invalidOrMissingFields
   });
 
@@ -1875,45 +1690,14 @@ function generateRequestOptions(data) {
 function sendRequest(data, mappedData) {
   const requestUrl = generateRequestBaseUrl();
   const requestOptions = generateRequestOptions(data);
-
-  const eventName = mappedData.data[0].event.event_type;
-  const tagId = mappedData.tag_id;
-  log({
-    Name: 'LineYahooCAPITag',
-    Type: 'Request',
-    EventName: eventName,
-    RequestMethod: requestOptions.method,
-    RequestUrl: requestUrl,
-    RequestBody: mappedData,
-    Message: 'Tag ID: ' + tagId
-  });
-
   return sendHttpRequest(requestUrl, requestOptions, JSON.stringify(mappedData))
     .then((result) => {
-      log({
-        Name: 'LineYahooCAPITag',
-        Type: 'Response',
-        EventName: eventName,
-        ResponseStatusCode: result.statusCode,
-        ResponseHeaders: result.headers,
-        ResponseBody: result.body,
-        Message: 'Tag ID: ' + tagId
-      });
-
       if (result.statusCode === 202) {
         return !data.useOptimisticScenario ? data.gtmOnSuccess() : undefined;
       }
       return !data.useOptimisticScenario ? data.gtmOnFailure() : undefined;
     })
     .catch((result) => {
-      log({
-        Name: 'LineYahooCAPITag',
-        Type: 'Message',
-        EventName: eventName,
-        Message: 'Request failed or timed out. Tag ID: ' + tagId,
-        Reason: JSON.stringify(result)
-      });
-
       return !data.useOptimisticScenario ? data.gtmOnFailure() : undefined;
     });
 }
@@ -2026,91 +1810,8 @@ function isConsentGivenOrNotRequired(data, eventData) {
 }
 
 function log(rawDataToLog) {
-  const logDestinationsHandlers = {};
-  if (determinateIsLoggingEnabled()) logDestinationsHandlers.console = logConsole;
-  if (determinateIsLoggingEnabledForBigQuery()) logDestinationsHandlers.bigQuery = logToBigQuery;
-
   rawDataToLog.TraceId = getRequestHeader('trace-id');
-
-  const keyMappings = {
-    // No transformation for Console is needed.
-    bigQuery: {
-      Name: 'tag_name',
-      Type: 'type',
-      TraceId: 'trace_id',
-      EventName: 'event_name',
-      RequestMethod: 'request_method',
-      RequestUrl: 'request_url',
-      RequestBody: 'request_body',
-      ResponseStatusCode: 'response_status_code',
-      ResponseHeaders: 'response_headers',
-      ResponseBody: 'response_body'
-    }
-  };
-
-  for (const logDestination in logDestinationsHandlers) {
-    const handler = logDestinationsHandlers[logDestination];
-    if (!handler) continue;
-
-    const mapping = keyMappings[logDestination];
-    const dataToLog = mapping ? {} : rawDataToLog;
-
-    if (mapping) {
-      for (const key in rawDataToLog) {
-        const mappedKey = mapping[key] || key;
-        dataToLog[mappedKey] = rawDataToLog[key];
-      }
-    }
-
-    handler(dataToLog);
-  }
-}
-
-function logConsole(dataToLog) {
-  logToConsole(JSON.stringify(dataToLog));
-}
-
-function logToBigQuery(dataToLog) {
-  const connectionInfo = {
-    projectId: data.logBigQueryProjectId,
-    datasetId: data.logBigQueryDatasetId,
-    tableId: data.logBigQueryTableId
-  };
-
-  dataToLog.timestamp = getTimestampMillis();
-
-  ['request_body', 'response_headers', 'response_body'].forEach((p) => {
-    dataToLog[p] = JSON.stringify(dataToLog[p]);
-  });
-
-  BigQuery.insert(connectionInfo, [dataToLog], { ignoreUnknownValues: true });
-}
-
-function determinateIsLoggingEnabled() {
-  const containerVersion = getContainerVersion();
-  const isDebug = !!(
-    containerVersion &&
-    (containerVersion.debugMode || containerVersion.previewMode)
-  );
-
-  if (!data.logType) {
-    return isDebug;
-  }
-
-  if (data.logType === 'no') {
-    return false;
-  }
-
-  if (data.logType === 'debug') {
-    return isDebug;
-  }
-
-  return data.logType === 'always';
-}
-
-function determinateIsLoggingEnabledForBigQuery() {
-  if (data.bigQueryLogType === 'no') return false;
-  return data.bigQueryLogType === 'always';
+  logToConsole(JSON.stringify(rawDataToLog));
 }
 
 
@@ -2221,16 +1922,6 @@ ___SERVER_PERMISSIONS___
   {
     "instance": {
       "key": {
-        "publicId": "read_container_data",
-        "versionId": "1"
-      },
-      "param": []
-    },
-    "isRequired": true
-  },
-  {
-    "instance": {
-      "key": {
         "publicId": "read_event_data",
         "versionId": "1"
       },
@@ -2271,67 +1962,6 @@ ___SERVER_PERMISSIONS___
               {
                 "type": 1,
                 "string": "https://conversion-api.yahooapis.jp/*"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
-    "isRequired": true
-  },
-  {
-    "instance": {
-      "key": {
-        "publicId": "access_bigquery",
-        "versionId": "1"
-      },
-      "param": [
-        {
-          "key": "allowedTables",
-          "value": {
-            "type": 2,
-            "listItem": [
-              {
-                "type": 3,
-                "mapKey": [
-                  {
-                    "type": 1,
-                    "string": "projectId"
-                  },
-                  {
-                    "type": 1,
-                    "string": "datasetId"
-                  },
-                  {
-                    "type": 1,
-                    "string": "tableId"
-                  },
-                  {
-                    "type": 1,
-                    "string": "operation"
-                  }
-                ],
-                "mapValue": [
-                  {
-                    "type": 1,
-                    "string": "*"
-                  },
-                  {
-                    "type": 1,
-                    "string": "*"
-                  },
-                  {
-                    "type": 1,
-                    "string": "*"
-                  },
-                  {
-                    "type": 1,
-                    "string": "write"
-                  }
-                ]
               }
             ]
           }
@@ -3846,6 +3476,9 @@ setup: |-
 
 
 ___NOTES___
+
+2026-05-25 Change Notes:
+ - Logging removal.
 
 Created on 3/9/2026, 5:48:10 PM
 
