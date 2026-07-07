@@ -1,8 +1,8 @@
-# LINE Yahoo Conversion API タグ（Google タグ マネージャー サーバーサイド）
+# LINE Yahoo Conversion API タグ（Display Ads）（Google タグ マネージャー サーバーサイド）
 
 > 🇺🇸 [English version here](README.md)
 
-**LINE Yahoo Conversion API タグ**（Google タグ マネージャー サーバーサイド）は、GTM サーバーコンテナからコンバージョンイベントデータを [LINE Yahoo Conversion API](https://ads-developers.yahoo.co.jp/ja/conversion-api/) へ直接送信するタグです。このサーバー間連携により、ピクセルのみの実装と比較して、より信頼性が高くプライバシーに配慮したコンバージョン計測が可能になります。
+**LINE Yahoo Conversion API タグ（Display Ads）**（Google タグ マネージャー サーバーサイド）は、GTM サーバーコンテナからコンバージョンイベントデータを [LINE Yahoo Conversion API](https://ads-developers.yahoo.co.jp/ja/conversion-api/) へ直接送信するタグです。このサーバー間連携により、ピクセルのみの実装と比較して、より信頼性が高くプライバシーに配慮したコンバージョン計測が可能になります。
 
 > **注意:** Conversion API は現在、**ディスプレイ広告にのみ対応**しています。
 
@@ -22,16 +22,9 @@
 
 ## インストール
 
-1. **テンプレートのダウンロード**:
-   - このリポジトリから `template.tpl` ファイルをダウンロードします。
-2. **GTM サーバーコンテナへのインポート**:
-   - GTM サーバーコンテナで**テンプレート**セクションに移動します。
-   - **タグテンプレート**セクションの**新規**をクリックします。
-   - 右上の**三点メニュー**をクリックし、**インポート**を選択します。
-   - ダウンロードした `template.tpl` ファイルを選択し、**保存**をクリックします。
-3. **タグの作成**:
-   - **タグ**に移動し、**新規**をクリックします。
-   - インポートした **「LINE Yahoo Conversion API タグ」** テンプレートを選択します。
+1. **タグ**に移動し、**新規**をクリックします。
+2. コミュニティ テンプレート ギャラリーで **LINE Yahoo Conversion API Tag / Conversion APIタグ（LINEヤフー）for Display Ads by Stape** を検索します。
+3. **ワークスペースに追加**をクリックします。
 
 ## タグ設定
 
@@ -46,7 +39,7 @@
 | **コンバージョンソース** | コンバージョンイベントが発生した場所。現在は `Web` のみサポートされています。 |
 | **イベントスニペット ID** | コンバージョン設定から取得したイベントスニペット ID（トラッキングタグ管理ビューからのものは対象外）。`page_view` イベントタイプには適用されません。 |
 | **テストモード** | `true` の場合、イベントは計測から除外されます。 |
-| **楽観的シナリオを使用する** | 有効にすると、API レスポンスを待たずに即座に `gtmOnSuccess()` を呼び出します。サーバーのレスポンス時間が短縮されますが、失敗した場合でも成功として扱われます。 |
+| **楽観的シナリオを使用する** | 有効にすると、API レスポンスを待たずに即座に `gtmOnSuccess()` を呼び出し、サーバーのレスポンス時間を短縮します。 |
 
 #### GA4 → Conversion API イベントタイプマッピング（クライアントから継承）
 
@@ -140,4 +133,7 @@
 
 ## オープンソース
 
-**LINE Yahoo Conversion API タグ（GTM サーバーサイド）**は、Apache 2.0 ライセンスのもと [Stape チーム](https://stape.io/)によって開発・メンテナンスされています。
+**LINE Yahoo Conversion API タグ（Display Ads）（GTM サーバーサイド）**は、Apache 2.0 ライセンスのもと [Stape チーム](https://stape.io/)によって開発・メンテナンスされています。
+
+### GTM Gallery Status
+🟢 [掲載済み](https://tagmanager.google.com/gallery/#/owners/stape-io/templates/line-yahoo-tag)
