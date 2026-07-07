@@ -1,8 +1,8 @@
-# LINE Yahoo Conversion API Tag for Google Tag Manager Server-Side
+# LINE Yahoo Conversion API Tag (Display Ads) for Google Tag Manager Server-Side
 
 > 🇯🇵 [日本語版はこちら](README.ja.md)
 
-The **LINE Yahoo Conversion API Tag** for Google Tag Manager Server-Side allows you to send conversion event data from your server container directly to the [LINE Yahoo Conversion API](https://ads-developers.yahoo.co.jp/en/conversion-api/). This server-to-server integration provides a more reliable and privacy-compliant way to track conversions compared to pixel-only setups.
+The **LINE Yahoo Conversion API Tag (Display Ads)** for Google Tag Manager Server-Side allows you to send conversion event data from your server container directly to the [LINE Yahoo Conversion API](https://ads-developers.yahoo.co.jp/en/conversion-api/). This server-to-server integration provides a more reliable and privacy-compliant way to track conversions compared to pixel-only setups.
 
 > **Note:** The Conversion API is currently only compatible with **Display Ads**.
 
@@ -22,16 +22,9 @@ This tag is designed to complement the [LINE Yahoo Measurement Tag (web pixel)](
 
 ## Installation
 
-1. **Download the Template**:
-   - Download the `template.tpl` file from this repository.
-2. **Import to GTM Server Container**:
-   - In your GTM Server Container, navigate to the **Templates** section.
-   - Click **New** under the **Tag Templates** section.
-   - Click the **three-dot menu** in the top right and select **Import**.
-   - Select the downloaded `template.tpl` file and click **Save**.
-3. **Create a New Tag**:
-   - Go to **Tags** and click **New**.
-   - Select the newly imported **"LINE Yahoo Conversion API Tag"** template.
+1. Go to **Tags** and click **New**.
+2. Search the **LINE Yahoo Conversion API Tag / Conversion APIタグ（LINEヤフー）for Display Ads by Stape** in the Community Template Gallery
+3. Click **Add to Workspace**.
 
 ## Tag Configuration
 
@@ -140,7 +133,7 @@ Available when **Conversion Source** is set to `Web`. For full parameter descrip
 
 ## Open Source
 
-The **LINE Yahoo Conversion API Tag for GTM Server-Side** is developed and maintained by the [Stape Team](https://stape.io/) under the Apache 2.0 license.
+The **LINE Yahoo Conversion API Tag (Display Ads) for GTM Server-Side** is developed and maintained by the [Stape Team](https://stape.io/) under the Apache 2.0 license.
 
 ### GTM Gallery Status
 🟢 [Listed](https://tagmanager.google.com/gallery/#/owners/stape-io/templates/line-yahoo-tag)
