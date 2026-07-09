@@ -4,7 +4,8 @@
 
 The **LINE Yahoo Conversion API Tag (Display Ads)** for Google Tag Manager Server-Side allows you to send conversion event data from your server container directly to the [LINE Yahoo Conversion API](https://ads-developers.yahoo.co.jp/en/conversion-api/). This server-to-server integration provides a more reliable and privacy-compliant way to track conversions compared to pixel-only setups.
 
-> **Note:** The Conversion API is currently only compatible with **Display Ads**.
+> **Note:** This tag is for **Display Ads** Conversion API.
+> For the **Search Ads** version, please refer to the [LINE Yahoo Conversion API Tag (Search Ads)](https://github.com/stape-io/line-yahoo-search-ads-tag).
 
 ## Features
 

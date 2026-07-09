@@ -612,7 +612,7 @@ ___TEMPLATE_PARAMETERS___
         "type": "CHECKBOX",
         "name": "autoMapServerEventDataParameters",
         "checkboxText": {
-          "text": "Auto-map Server Event Data Parameters",
+          "text": "Automap Server Event Data Parameters",
           "translations": [
             {
               "locale": "ja",
@@ -761,11 +761,11 @@ ___TEMPLATE_PARAMETERS___
         },
         "simpleValueType": true,
         "help": {
-          "text": "If enabled, the tag will attempt to automatically map parameters from the Event Data.\n\u003cbr/\u003e\u003cbr/\u003e\nAny value you manually enter in a field below will always override the auto-mapped value.\n\u003cbr/\u003e\u003cbr/\u003e\nDefault mappings:\n\u003cul\u003e\n\u003cli\u003eEmail:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_Data.sha256_email_address\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003ePhone:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.sha256_phone_number\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAnonymous ID (_\u003ci\u003ely_su\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_su\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_su\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_su\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eClick ID (\u003ci\u003e_ly_c\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_c\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_c\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eComplementary Click ID (\u003ci\u003e_ly_r\u003c/i\u003e Cookie):\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_r\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_r\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eMobile ID (iOS IDFA and Android GAID/AAID): \u003ci\u003eeventData[\u0027x-ga-resettable_device_id\u0027]\u003c/i\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
+          "text": "If enabled, the tag will attempt to automatically map parameters from the Event Data.\n\u003cbr/\u003e\u003cbr/\u003e\nAny value you manually enter in a field below will always override the auto-mapped value.\n\u003cbr/\u003e\u003cbr/\u003e\nDefault mappings:\n\u003cul\u003e\n\u003cli\u003eEmail:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_Data.sha256_email_address\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003ePhone:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.user_data.sha256_phone_number\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAnonymous ID:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_su\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_su\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_su\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eClick ID:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_c\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_c\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eComplementary Click ID:\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e URL parameter\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_r\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_r\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eMobile ID (iOS IDFA and Android GAID/AAID): \u003ci\u003eeventData[\u0027x-ga-resettable_device_id\u0027]\u003c/i\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
           "translations": [
             {
               "locale": "ja",
-              "text": "有効にすると、タグはイベントデータからパラメータを自動的にマッピングしようとします。\n\u003cbr/\u003e\u003cbr/\u003e\n下部のフィールドに手動で入力した値は、常に自動マッピングの値より優先されます。\n\u003cbr/\u003e\u003cbr/\u003e\nデフォルトマッピング：\n\u003cul\u003e\n\u003cli\u003eメールアドレス：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.sha256_email_address\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e電話番号：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.sha256_phone_number\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e匿名ID（_\u003ci\u003ely_su\u003c/i\u003e Cookie）：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_su\u003c/i\u003e Cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_su\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_su\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eクリックID（\u003ci\u003e_ly_c\u003c/i\u003e Cookie）：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e URLパラメータ\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e Cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_c\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_c\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e補完クリックID（\u003ci\u003e_ly_r\u003c/i\u003e Cookie）：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e URLパラメータ\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e Cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_r\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_r\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eモバイルID（iOS IDFA および Android GAID/AAID）： \u003ci\u003eeventData[\u0027x-ga-resettable_device_id\u0027]\u003c/i\u003e\n\u003c/li\u003e\n\u003c/ul\u003e"
+              "text": "有効にすると、タグはイベントデータからパラメータを自動的にマッピングしようとします。\n\u003cbr/\u003e\u003cbr/\u003e\n下部のフィールドに手動で入力した値は、常に自動マッピングの値より優先されます。\n\u003cbr/\u003e\u003cbr/\u003e\nデフォルトマッピング：\n\u003cul\u003e\n\u003cli\u003eメールアドレス：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.email\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.email_address\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.sha256_email_address\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e電話番号：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.phone\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.phone_number\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.userData.sha256_phone_number\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e匿名ID：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_su\u003c/i\u003e Cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_su\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_su\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eクリックID：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e URLパラメータ\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_c\u003c/i\u003e Cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_c\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_c\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e補完クリックID：\n\u003cul\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e URLパラメータ\u003c/li\u003e\n\u003cli\u003e\u003ci\u003e_ly_r\u003c/i\u003e Cookie\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData._ly_r\u003c/i\u003e\u003c/li\u003e\n\u003cli\u003e\u003ci\u003eeventData.ly_r\u003c/i\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eモバイルID（iOS IDFA および Android GAID/AAID）： \u003ci\u003eeventData[\u0027x-ga-resettable_device_id\u0027]\u003c/i\u003e\n\u003c/li\u003e\n\u003c/ul\u003e"
             }
           ]
         },
@@ -1304,12 +1304,12 @@ const eventData = getAllEventData();
 if (shouldExitEarly(data, eventData)) return;
 
 const mappedData = mapEvent(data, eventData);
-setCookies(data, mappedData);
+setIdsCookies(data, mappedData);
 
 const invalidOrMissingFields = validateMappedData(mappedData);
 if (invalidOrMissingFields) {
   log({
-    Name: 'LineYahooCAPITag',
+    Name: 'LineYahooDisplayAdsCAPITag',
     Type: 'Message',
     EventName: mappedData.data[0].event.event_type,
     Message: '🛑 [ERROR] Request was not sent.',
@@ -1329,7 +1329,7 @@ if (data.useOptimisticScenario) {
   Vendor related functions
 ==============================================================================*/
 
-function setCookies(data, mappedData) {
+function setIdsCookies(data, mappedData) {
   const cookieOptions = {
     domain: getCookieDomain(data.cookieDomain),
     samesite: data.cookieSameSite || 'Lax',
@@ -1444,7 +1444,7 @@ function getClickId(eventData, clickIdName) {
 function addUserIdentifiers(data, eventData, event) {
   const userData = {};
 
-  if (isUIFieldTrue(data.autoMapUserIdentifiersParameters)) {
+  if (data.autoMapUserIdentifiersParameters) {
     const email = getEmailAddressFromEventData(eventData);
     if (email) userData.hashed_email = email;
 
@@ -1477,7 +1477,7 @@ function addEventParameters(data, eventData, event) {
   const isPageView = event.event.event_type === 'page_view';
   const eventParameters = {};
 
-  if (isUIFieldTrue(data.autoMapEventParameters)) {
+  if (data.autoMapEventParameters) {
     let currencyFromItems;
     let valueFromItems;
     let items;
