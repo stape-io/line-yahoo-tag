@@ -1,6 +1,8 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/line-yahoo-tag'
 versions:
+  - sha: 3b1beabee462b11b76d03d7f59a4951ea6a75a99
+    changeNotes: Add elucidation that the tag is for Display Ads.
   - sha: 9a8e48438412922b9e466ce5baad4a78e9d8d8f6
     changeNotes: Logging removal.
   - sha: 3e512b202daecf1b3ee88553f79b58491de8c642
