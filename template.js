@@ -27,12 +27,12 @@ const eventData = getAllEventData();
 if (shouldExitEarly(data, eventData)) return;
 
 const mappedData = mapEvent(data, eventData);
-setCookies(data, mappedData);
+setIdsCookies(data, mappedData);
 
 const invalidOrMissingFields = validateMappedData(mappedData);
 if (invalidOrMissingFields) {
   log({
-    Name: 'LineYahooCAPITag',
+    Name: 'LineYahooDisplayAdsCAPITag',
     Type: 'Message',
     EventName: mappedData.data[0].event.event_type,
     Message: '🛑 [ERROR] Request was not sent.',
@@ -52,7 +52,7 @@ if (data.useOptimisticScenario) {
   Vendor related functions
 ==============================================================================*/
 
-function setCookies(data, mappedData) {
+function setIdsCookies(data, mappedData) {
   const cookieOptions = {
     domain: getCookieDomain(data.cookieDomain),
     samesite: data.cookieSameSite || 'Lax',
@@ -167,7 +167,7 @@ function getClickId(eventData, clickIdName) {
 function addUserIdentifiers(data, eventData, event) {
   const userData = {};
 
-  if (isUIFieldTrue(data.autoMapUserIdentifiersParameters)) {
+  if (data.autoMapUserIdentifiersParameters) {
     const email = getEmailAddressFromEventData(eventData);
     if (email) userData.hashed_email = email;
 
@@ -200,7 +200,7 @@ function addEventParameters(data, eventData, event) {
   const isPageView = event.event.event_type === 'page_view';
   const eventParameters = {};
 
-  if (isUIFieldTrue(data.autoMapEventParameters)) {
+  if (data.autoMapEventParameters) {
     let currencyFromItems;
     let valueFromItems;
     let items;
